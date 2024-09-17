@@ -34,3 +34,4 @@ docker run -p 3000:3000 --name my-node-app node-app
 	-p       (mapear puerto interno a puerto externo)
 	--name   (nombre del contenedor q se corre)
 	node-app (imagen sobre la cual se corre el contenedor) 
+
