@@ -1,0 +1,36 @@
+docker run (correr contenedor)
+	    -it (modo interactivo y I/O)
+	    --name [dar nombre de contenedor]
+
+example: docker run -it --name ubuntu2004 ubuntu:20.04
+ 
+       rm (elimina contenedor)
+
+example: docker rm ubuntu2004
+
+       stop (detiene contenedor)
+
+example: docker stop ubuntu2004
+
+	exec (ejecuta contenedor existente)
+
+example:
+
+	docker exec -it ubuntu2004 ./bin/bash
+
+**** Construir una imagen
+
+docker build -t node-app .
+
+	build (construccion de la imagen)
+	-t    (tagear la imagen)
+	.     (directorio, en este caso se esta dentro del directorio)
+
+**** Correr un contenedor con la imagen creada
+
+docker run -p 3000:3000 --name my-node-app node-app
+	
+	run      (correr el contenedor)
+	-p       (mapear puerto interno a puerto externo)
+	--name   (nombre del contenedor q se corre)
+	node-app (imagen sobre la cual se corre el contenedor) 
